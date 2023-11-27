@@ -32,3 +32,15 @@ scene.add(torus);
 // pointLight.position.set(20, 20, 20);
 
 // const ambientLight = new THREE.AmbientLight(0xffffff);
+
+const animate = () => {
+  requestAnimationFrame(animate);
+  console.log(torus.rotation);
+  torus.rotation.x += 0.01;
+  torus.rotation.y += 0.005;
+  torus.rotation.z += 0.01;
+
+  renderer.render(scene, camera);
+};
+
+animate();
